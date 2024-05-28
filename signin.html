@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5/main.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5/main.min.css" rel="stylesheet">
+    <!-- Add crossorigin attribute for CORS -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" crossorigin="anonymous"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js' crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#login-button').click(function(){
+                var username = $('#username').val();
+                var password = $('#password').val();
+                if (username.trim() === "" || password.trim() === "") {
+                    alert("Please enter both username and password.");
+                    return false;
+                } else {
+                    // Perform login action here, for now redirecting to about.html
+                    window.location.href = 'about.html';
+                }
+            });
+
+            $('#loginbutton').click(function(){
+                var fname = $('#fname').val();
+                var lname = $('#lname').val();
+                var username = $('#reg-username').val();
+                var email = $('#email').val();
+                var password = $('#reg-password').val();
+                var confirm_password = $('#confirm_password').val();
+                var phoneNum = $('#phoneNum').val();
+                
+                if (fname.trim() === "" || lname.trim() === "" || username.trim() === "" || email.trim() === "" || password.trim() === "" || confirm_password.trim() === "" || phoneNum.trim() === "") {
+                    alert("Please fill in all fields.");
+                    return false;
+                } else if (!validateEmail(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                } else if (password !== confirm_password) {
+                    alert("Passwords do not match.");
+                    return false;
+                } else if (!validatePhoneNumber(phoneNum)) {
+                    alert("Please enter a valid phone number (numeric characters only).");
+                    return false;
+                } else {
+                    // Proceed with registration
+                    // For now, let's just display a success message
+                    alert("Registration successful!");
+                    window.location.href = 'about.html';
+                }
+            });
+            // Function to validate email format
+            function validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+
+            // Function to validate password format
+            function validatePassword(password) {
+                // Password must be at least 8 characters long and contain at least one number, one lowercase letter, and one uppercase letter
+                var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+                return re.test(password);
+            }
+
+            // Function to validate phone number format
+            function validatePhoneNumber(phoneNum) {
+                // Phone number must contain only numeric characters
+                var re = /^\d+$/;
+                return re.test(phoneNum);
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="https://i.imgur.com/mnCM040.jpeg" target="_blank"><img src="https://i.imgur.com/mnCM040.jpeg" alt="Loaf Zetty Patisserie"></a>
+            </div>
+            <div class="title">
+                <h1>Loaf Zetty Patisserie</h1>
+            </div>
+            <div class="buttons">
+                <div class="cart-button">
+                    <a href="cart.html"><button></button></a>
+                </div>
+                <div class="signin-button">
+                    <a href="signin.html"><button>Sign In</button></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="signin.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="login-container">
+        <h1 class="about-us-title">Login</h1>
+        <form class="login-form">
+            <center>
+                <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/008/302/515/non_2x/eps10-brown-user-icon-or-logo-in-simple-flat-trendy-modern-style-isolated-on-white-background-free-vector.jpg" alt="Login" style="width: 50px"></a><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="button" onclick="promptLogin()">Login</button>
+            </center>
+        </form><br><br> 
+    </div> 
+    <div id="registrationModal" class="modal-container">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegistrationModal()">&times;</span>
+            <h2 class="about-us-title">Sign Up</h2>
+            <form class="register-form" id="register-form">
+                <fieldset>
+                    <legend>Registration</legend>
+                    <div class="form-group">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname">
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label for="reg-username">Username:</label>
+                            <input type="text" id="reg-username" name="username" autocomplete="username">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-password">Password:</label>
+                            <input type="password" id="reg-password" name="password">
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNum">Phone Number:</label>
+                            <input type="text" id="phoneNum" name="phoneNum">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Birthday:</label>
+                            <input type="date" id="birthday" name="birthday">
+                            <div class="gender-options">
+                                Gender:
+                                <input type="radio" id="gender-male" name="gender" value="male">
+                                <label for="gender-male">Male</label>
+                                <input type="radio" id="gender-female" name="gender" value="female">
+                                <label for="gender-female">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State:</label>
+                            <select name="state" id="state" onclick="toggleDropdown()">
+                                <option value="volvo">Johor</option>
+                                <option value="saab">Kedah</option>
+                                <option value="opel">Kelantan</option>
+                                <option value="audi">Malacca</option>
+                                <option value="audi">Negeri Sembilan</option>
+                                <option value="audi">Pahang</option>
+                                <option value="audi">Perak</option>
+                                <option value="audi">Perlis</option>
+                                <option value="audi">Sabah</option>
+                                <option value="audi">Sarawak</option>
+                                <option value="audi">Selangor</option>
+                                <option value="audi">Terengganu</option>
+                                <option value="audi">Kuala Lumpur</option>
+                                <option value="audi">Labuan</option>
+                                <option value="audi">Putrajaya</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            Privacy<input type="checkbox" name="privacy"> Yes, I accept to receive communication and offers via mobile phone<br><br>
+                        </div>
+                    </div>
+                    <div class="form-group" id="loginbutton">
+                        <a href="about.html" class="loginbutton">Register</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <center><button class="register-button" onclick="openRegistrationModal()">Sign Up</button></center>
+    <footer>
+        <div class="address">
+            <a href="https://google.com/maps/dir//30,+2%2F2,+Jalan+Garuda,+Larkin+Jaya,+80350+Johor+Bahru,+Johor/@1.4943365,103.6576696,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31da7192a17dce8f:0x4aaedd3d314594b8!2m2!1d103.7400716!2d1.494338?entry=ttu" target="_blank">
+                <p>Loaf Zetty Patisserie, 30, 2/2, Jalan Garuda,<br>Larkin Jaya,<br> 80350 Johor Bahru,<br> Johor</p>
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/480px-Facebook_Logo_2023.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/loafadam.patisserie/?hl=en" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram">
+            </a>                
+        </div>
+    </footer>
+
+    <script>
+        function promptLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Please fill in both username and password fields.");
+                return false;
+            } else {
+                // Perform login action here, for now redirecting to about.html
+                window.location.href = 'about.html';
+            }
+        }
+
+        function openRegistrationModal() {
+            var modalContainer = document.getElementById("registrationModal");
+            modalContainer.style.display = "block"; // Show the modal
+            loadRegisterDemoContent(); // Load content of registerdemo.html into the modal
+        }
+
+        // Function to load content of registerdemo.html into the modal
+        function loadRegisterDemoContent() {
+            var modalContent = document.querySelector("#registrationModal .modal-content");
+            // Make an AJAX request to fetch the content of registerdemo.html
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "registerdemo.html", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    modalContent.innerHTML = xhr.responseText; // Insert the fetched content into the modal
+                }
+            };
+            xhr.send();
+        }
+
+        // Function to close the registration modal
+        function closeRegistrationModal() {
+            var modalContainer = document.getElementById("registrationModal");
+            modalContainer.style.display = "none"; // Hide the modal
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function (event) {
+            var modalContainer = document.getElementById("registrationModal");
+            if (event.target == modalContainer) {
+                modalContainer.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

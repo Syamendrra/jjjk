@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang = "english">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>Loaf Zetty Patisserie</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link href='https://unpkg.com/@fullcalendar/core@5/main.css' rel='stylesheet' />
+        <link href='https://unpkg.com/@fullcalendar/daygrid@5/main.css' rel='stylesheet' />
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+        </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <a href="https://i.imgur.com/mnCM040.jpeg" target="_blank"><img src="https://i.imgur.com/mnCM040.jpeg" alt="Loaf Zetty Patisserie"></a>
+                </div>
+                <div class="title">
+                    <h1>Loaf Zetty Patisserie</h1>
+                </div>
+                <div class="buttons">
+                    <div class="cart-button">
+                        <a href="cart.html"><button></button></a>
+                    </div>
+                    <div class="signin-button">
+                        <a href="signin.html"><button>Sign In</button></a>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="signin.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="FAQ.html">FAQ</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+        <h1><center>Menu<center></h1>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="https://www.lacherpatisserie.com/cdn/shop/products/classic-tiramisu-01.jpg?v=1644764903&width=1200" alt="Classic Tiramisu">
+                    <div class="menu-details">
+                        <h2>Zetty's Classic Tiramisu<br>RM194.00</h2>
+                        <div class="item-options">
+                            <select>
+                                <option value="slice">Slice</option>
+                                <option value="half">Half</option>
+                                <option value="full">Full</option>
+                            </select>
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <span class="quantity-value">1</span>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <p>A staple Italian Dessert made with fluffy ladyfinger pastries dipped in freshly brewed coffee, layered with a mixture of eggs, sugar and mascarpone and flavoured with the finest cocoa powder. Deriving from the Italian word "Tirami Su", meaning cheer me up, this Italian classic is sure to put you on your feet and ravin for more.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://www.dessertfortwo.com/wp-content/uploads/2018/11/small-batch-croissants-2-480x480.jpg" alt="Classic Croissant">
+                    <div class="menu-details">
+                        <h2>Zetty's Classic Croissant<br>RM14.00</h2>
+                        <div class="item-options">
+                            <select>
+                                <option value="classic">Classic</option>
+                                <option value="filling">Filling</option>
+                            </select>
+                            <div class="quantity">
+                                <button class="quantity-btn minus">-</button>
+                                <span class="quantity-value">1</span>
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <p>A popular French pastry made from rich, buttery and flaky viennoiserie pastry in a crescent shape. With a variety of fillings available for an additional RM1.00, this classic baker's masterpiece never fails to impress when paired with the smoothest cup of cappuccino, crafted by the best of our baristas with the freshest ingredients</p>
+                    </div>
+        </div>
+        <div class = 'menu-item'>
+            <img src = "https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSAGR_z32pqR6KX8pO021KtUDcZrzhSZW_EpLRZ5D0k1mTthOALP5hhom8Q345nHhCm" alt = "Menu 3">
+            <div class = "menu-details">
+                <h2>Zetty's Biscoff Crumble Cheesecake<br>RM164.00</h2>
+                <div class="item-options">
+                    <select>
+                        <option value="slice">Slice</option>
+                        <option value="half">Half</option>
+                        <option value="full">Full</option>
+                    </select>
+                    <div class="quantity">
+                        <button class="quantity-btn minus">-</button>
+                        <span class="quantity-value">1</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                    <p>No bakery is complete without a Cheesecake. The legend goes that every patisserie is defined by it's own version of this Ancient Greek Dessert. Our Cheesecake is made with fresh cottage cheese, with a solid crumbly base of Biscoff crushed cookies, and layered throughout the cake to give a wonderful contrast of smooth, creamy cheese and crumbly, sweet cookies </p>
+                </div>
+            </div>
+        <div class = 'menu-item'>
+                <img src = "https://www.cookwithnabeela.com/wp-content/uploads/2024/02/ChocolateDippedDoughnuts.webp" alt = "Menu 4">
+                <div class = "menu-details">
+                    <h2>Zetty's Dreamy Doughnuts<br>RM12.00</h2>
+                    <div class="item-options">
+                        <select>
+                            <option value="Box of 2">Box of 2</option>
+                            <option value="Box of 3">Box of 3</option>
+                            <option value="Box of 6">Box of 6</option>
+                        </select>
+                        <div class="quantity">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <p>A pastry made from leavened fried dough, popular among many countries and is sold virutally anyhwere with a variety of toppings. Zetty's take on the poeple's favourite dessert ranged from sugar glazed doughnuts to the most lavish and delicious matcha flavours. Ranging from Jumbo size to mini, Zetty's believes that there is the perfect doughnut here for anyone, anywhere, anytime</p>
+                </div>
+            </div>
+        <div class = 'menu-item'>
+                <img src = "https://sugargeekshow.com/wp-content/uploads/2020/04/focaccia-bread-art-featured.jpg" alt = "Menu 5">
+                <div class = "menu-details">
+                    <h2>Zetty's Flourished Focaccia<br>RM20.00</h2>
+                    <div class="item-options">
+                        <select>
+                            <option value="slice">Slice</option>
+                            <option value="half">Half</option>
+                            <option value="full">Full</option>
+                        </select>
+                        <div class="quantity">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <p>A Flat Leavened oven-baked Italian bread with just about a hundred variants and recipes, also known as sourdough, Zetty's take on this Lingurian Classic is drenched in olive oil, onions, parsley, tomatos, peppers and olives. A Healthy and fulfilling pastry among the shelves of guilty treats, this focaccia will keep you coming for more, without denting your strict diet</p>
+                </div>
+            </div>
+        <div class = 'menu-item'>
+                <img src = "https://handletheheat.com/wp-content/uploads/2020/10/BAKERY-STYLE-CHOCOLATE-CHIP-COOKIES-9-637x637-1.jpg" alt = "Menu 6">
+                <div class = "menu-details">
+                    <h2>Zetty's Homemade Classic Cookies<br>RM10.00</h2>
+                    <div class="item-options">
+                        <select>
+                            <option value="Set of 3">Set of 3</option>
+                            <option value="Set of 6">Set of 6</option>
+                            <option value="Set of 12">Set of 12</option>
+                        </select>
+                        <div class="quantity">
+                            <button class="quantity-btn minus">-</button>
+                            <span class="quantity-value">1</span>
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <p>Another one of people's favourite desserts, Zetty's cookies dont need much of an introduction, just dive in anywhere at anytime, ranging from your classic chocolate chip to white macademia, Zetty's Cookies are for sure a treat to look forward to</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="address">
+                <a href="https://google.com/maps/dir//30,+2%2F2,+Jalan+Garuda,+Larkin+Jaya,+80350+Johor+Bahru,+Johor/@1.4943365,103.6576696,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31da7192a17dce8f:0x4aaedd3d314594b8!2m2!1d103.7400716!2d1.494338?entry=ttu" target="_blank">
+                    <p>Loaf Zetty Patisserie, 30, 2/2, Jalan Garuda,<br>Larkin Jaya,<br> 80350 Johor Bahru,<br> Johor</p>
+                </a>
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/480px-Facebook_Logo_2023.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/loafadam.patisserie/?hl=en" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram">
+                </a>                
+            </div>
+            
+        </footer>
+        <script>
+            // Get the quantity buttons and value
+            var decreaseBtns = document.querySelectorAll('.minus');
+            var increaseBtns = document.querySelectorAll('.plus');
+            var quantityValues = document.querySelectorAll('.quantity-value');
+    
+            // Decrease button click event
+            decreaseBtns.forEach(decreaseBtn => {
+                decreaseBtn.addEventListener('click', function() {
+                    var currentValue = parseInt(this.nextElementSibling.textContent);
+                    if (currentValue > 0) {
+                        this.nextElementSibling.textContent = currentValue - 1;
+                    }
+                });
+            });
+    
+            // Increase button click event
+            increaseBtns.forEach(increaseBtn => {
+                increaseBtn.addEventListener('click', function() {
+                    var currentValue = parseInt(this.previousElementSibling.textContent);
+                    this.previousElementSibling.textContent = currentValue + 1;
+                });
+            });
+        </script>
+        
+        
+    </body>
+</html>

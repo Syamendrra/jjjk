@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href='https://unpkg.com/@fullcalendar/core@5/main.css' rel='stylesheet' />
+    <link href='https://unpkg.com/@fullcalendar/daygrid@5/main.css' rel='stylesheet' />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="https://i.imgur.com/mnCM040.jpeg" target="_blank"><img src="https://i.imgur.com/mnCM040.jpeg" alt="Loaf Zetty Patisserie"></a>
+            </div>
+            <div class="title">
+                <h1>Loaf Zetty Patisserie</h1>
+            </div>
+            <div class="buttons">
+                <div class="cart-button">
+                    <a href="cart.html"><button></button></a>
+                </div>
+                <div class="signin-button">
+                    <a href="signin.html"><button>Sign In</button></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="signin.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = "content-container">
+        <div class = "register-container">
+            <h2 class="about-us-title">Sign Up</h2>
+            <form class="register-form" id="register-form">
+                <fieldset>
+                    <legend>Registration</legend>
+                    <div class="form-group">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname">
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" autocomplete="username">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password">
+                            <label for="confirm_password">Confirm Password:</label>
+                            <input type="password" id="confirm_password" name="confirm_password">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNum">Phone Number:</label>
+                            <input type="text" id="phoneNum" name="phoneNum">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Birthday:</label>
+                            <input type="date" id="birthday" name="birthday">
+                            <div class="gender-options">
+                                Gender:
+                                <input type="radio" id="gender-male" name="gender" value="male">
+                                <label for="gender-male">Male</label>
+                                <input type="radio" id="gender-female" name="gender" value="female">
+                                <label for="gender-female">Female</label>
+                            </div>
+                    
+                            <label for="state">State:</label>
+                            <select name="state" id="state" onclick="toggleDropdown()">
+                                <option value="volvo">Johor</option>
+                                <option value="saab">Kedah</option>
+                                <option value="opel">Kelantan</option>
+                                <option value="audi">Malacca</option>
+                                <option value="audi">Negeri Sembilan</option>
+                                <option value="audi">Pahang</option>
+                                <option value="audi">Perak</option>
+                                <option value="audi">Perlis</option>
+                                <option value="audi">Sabah</option>
+                                <option value="audi">Sarawak</option>
+                                <option value="audi">Selangor</option>
+                                <option value="audi">Terengganu</option>
+                                <option value="audi">Kuala Lumpur</option>
+                                <option value="audi">Labuan</option>
+                                <option value="audi">Putrajaya</option>
+                            </select><br><br>
+                        </div>
+
+                        Privacy<input type="checkbox" name="privacy"> Yes, I accept to receive communication and offers via mobile phone<br><br>
+                    </div>
+                </div>
+                <div class="form-group" id="login-button">
+                    <a href="about.html" class="login-button">Login</a>
+                </div>
+                </fieldset>
+            </form> 
+        </div>
+    </div>
+    <footer>
+        <div class="address">
+            <a href="https://google.com/maps/dir//30,+2%2F2,+Jalan+Garuda,+Larkin+Jaya,+80350+Johor+Bahru,+Johor/@1.4943365,103.6576696,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31da7192a17dce8f:0x4aaedd3d314594b8!2m2!1d103.7400716!2d1.494338?entry=ttu" target="_blank">
+                <p>Loaf Zetty Patisserie, 30, 2/2, Jalan Garuda,<br>Larkin Jaya,<br> 80350 Johor Bahru,<br> Johor</p>
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/480px-Facebook_Logo_2023.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/loafadam.patisserie/?hl=en" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram">
+            </a>                
+        </div>
+        
+    </footer>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("state");
+            dropdown.classList.toggle("open");
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            // Function to validate the form
+            function validateForm(form) {
+                var isValid = true;
+                // Simple validation to check if required fields are filled
+                form.find('input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="radio"]:checked, select').each(function(){
+                    if($(this).val() === ''){
+                        isValid = false;
+                        return false; // exit loop early if any field is empty
+                    }
+                });
+                return isValid;
+            }
+        
+            // Event listener for registration form submission
+            $('#register-form').on('submit', function(e){
+                e.preventDefault();
+                console.log("Registration form submitted");
+                var isValid = validateForm($(this));
+                console.log("Form is valid:", isValid);
+                if(isValid){
+                    // Submit the registration form
+                    alert('Form submitted successfully!');
+                    $(this)[0].reset(); // Reset form after submission
+                    $.modal('<p>Thank you for signing up!</p>'); // Show a thank you message
+                } else {
+                    alert('Please fill out all required fields.');
+                }
+            });
+        
+            // Event listener for login button
+            $('#login-button').on('click', function(e){
+                e.preventDefault();
+                console.log("Login button clicked");
+                var isValid = validateForm($('#register-form'));
+                console.log("Form is valid:", isValid);
+                if(isValid){
+                    // Submit the registration form
+                    alert('Form submitted successfully!');
+                    $('#register-form')[0].reset(); // Reset form after submission
+                    window.location.href = $(this).find('a').attr('href');
+                } else {
+                    alert('Please fill out all required fields.');
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+</html>

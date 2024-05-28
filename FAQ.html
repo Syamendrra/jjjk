@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <!-- Include jQuery UI CSS -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link href='https://unpkg.com/@fullcalendar/core@5/main.css' rel='stylesheet' />
+        <link href='https://unpkg.com/@fullcalendar/daygrid@5/main.css' rel='stylesheet' />
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <!-- Include jQuery UI JavaScript -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    </head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="https://i.imgur.com/mnCM040.jpeg" target="_blank"><img src="https://i.imgur.com/mnCM040.jpeg" alt="Loaf Zetty Patisserie"></a>
+            </div>
+            <div class="title">
+                <h1>Loaf Zetty Patisserie</h1>
+            </div>
+            <div class="buttons">
+                <div class="cart-button">
+                    <a href="cart.html"><button></button></a>
+                </div>
+                <div class="signin-button">
+                    <a href="signin.html"><button>Sign In</button></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="signin.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-container">
+        <h2 class="about-us-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <h3 class="question">What payment methods do you accept?</h3>
+            <div class="answer">
+                <p>We accept various payment methods including credit/debit cards, PayPal, and cash on delivery.</p>
+            </div>
+
+            <h3 class="question">Do you deliver?</h3>
+            <div class="answer">
+                <p>Yes, we offer delivery services to our customers.</p>
+            </div>
+
+            <h3 class="question">Which area do you cover for delivery?</h3>
+            <div class="answer">
+                <p>We deliver to all areas within Semenanjung.</p>
+            </div>
+
+            <h3 class="question">Do you offer any gluten-free, dairy-free, vegan, or sugar-free items?</h3>
+            <div class="answer">
+                <p>Yes, we have a variety of options available for customers with specific dietary requirements. Please check our menu for more details.</p>
+            </div>
+
+            <h3 class="question">How far in advance should I place my order?</h3>
+            <div class="answer">
+                <p>It's recommended to place your order at least 2 Days in advance to ensure availability.</p>
+            </div>
+
+            <h3 class="question">How should I store my baked goods?</h3>
+            <div class="answer">
+                <p>To maintain freshness, store our baked goods in an airtight container at room temperature or in the refrigerator.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="address">
+            <a href="https://google.com/maps/dir//30,+2%2F2,+Jalan+Garuda,+Larkin+Jaya,+80350+Johor+Bahru,+Johor/@1.4943365,103.6576696,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31da7192a17dce8f:0x4aaedd3d314594b8!2m2!1d103.7400716!2d1.494338?entry=ttu" target="_blank">
+                <p>Loaf Zetty Patisserie, 30, 2/2, Jalan Garuda,<br>Larkin Jaya,<br> 80350 Johor Bahru,<br> Johor</p>
+            </a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/480px-Facebook_Logo_2023.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/loafadam.patisserie/?hl=en" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram">
+            </a>                
+        </div>
+    </footer>
+    <script>
+        // Initialize accordion widget
+        $( function() {
+            $( ".faq-container" ).accordion({
+                collapsible: true,
+                heightStyle: "content"
+            });
+        });
+    </script>
+
+</body>
+</html>

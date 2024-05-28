@@ -1,0 +1,536 @@
+/* Reset CSS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffe8d6;
+}
+
+/* Header */
+header {
+    background-color: #cb997e;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.title {
+    font-family: cursive;
+    text-align: center;
+    flex-grow: 1;
+    margin-left: 100px;
+}
+
+.cart-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-button button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url('https://www.freepnglogos.com/uploads/shopping-cart-png/shopping-cart-svg-png-icon-download-28.png');
+    background-size: contain;
+    cursor: pointer;
+}
+
+.buttons {
+    display:flex;
+    align-items: center;
+}
+
+.buttons .cart-button,
+.buttons .signin-button{
+    margin-right: 20px;
+}
+
+
+
+.buttons button {
+    background-color: #cb997e;
+    color: white;
+    order: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius:  5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buttons button:hover{
+    background-color: #6a3c23;
+}
+
+.register-button, .login-form button {
+    background-color: #cb997e; /* biege color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.register-button:hover, .login-form button:hover {
+    background-color: #ffae82; /* Lighter shade of red on hover */
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.3); /* Add shadow on hover */
+    animation: pulse 1s infinite; /* Add pulse animation on hover */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.register-button{
+    text-align: center;
+    margin-top: 20px; /* Adjusted spacing */
+    margin-bottom: 20px; /* Added spacing */
+}
+
+
+/* Navigation */
+nav {
+    background-color: #cb997e;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav:hover{
+    background-color: #6a3c23;
+    transition: background-color 0.5s ease;
+}
+
+nav ul li a:hover {
+    font-size: 1.2em; /* Increase the font size when hovered */
+    transition: font-size 0.3s ease; /* Add smooth transition */
+}
+
+
+
+/* About Us Section */
+.about-us-title {
+    border-style: solid;
+    border-width: 5px;
+    text-shadow: 3px 2px black;
+    font-size: 2.5em;
+    color: #cb997e;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.about-us-body {
+    text-align: center;
+    line-height: 1.6;
+    background-color: #f5deb3;
+    padding: 2rem;
+    border: 1px solid #fff;
+    font-family: Georgia, serif;
+    transition: transform 0.3s ease;
+}
+
+.about-us-body:hover {
+    transform: scale(1.1); /* Increase size when hovered */
+}
+
+/* Menu Section */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+}
+
+
+
+menu-item {
+    background-color: #f5deb3;
+    padding: 20px;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    width: 200px;
+    height: 250px;
+}
+
+.menu-item img {
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 100%;
+    max-height: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+.menu-details {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    background-color: #f5deb3; /* Background color for description box */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.menu-item img:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.item-options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item-options select{
+    padding: 5px;
+
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn{
+    background-color: #cb997e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-btn:hover{
+    background-color: #6a3c23;
+    transition: background-color 0.5s ease;
+}
+
+.quantity-value{
+    margin:   0 10px;
+}
+
+.add-to-cart {
+    background-color: #cb997e;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor:pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background-color: #6a3c23;
+}
+
+/* Footer */
+footer {
+    background-color: #ddbea9;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address p {
+    margin: 0;
+}
+
+.social-media img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+}
+
+.login-container {
+    width: 35%;
+    margin: 0 auto;
+    background-color: #f5deb3;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.animated-button {
+    background-color: #cb997e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    animation: pulse 1.5s infinite;
+}
+
+.register-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f5deb3;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 80px;
+    text-align: center;
+    transform: translateX(-100px);
+
+}
+
+.register-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.login-button {
+    background-color: #cb997e; /* Use the same button theme */
+    color: white;
+    border: none;
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    margin-top: 5px;
+    margin-right: 150px;
+}
+
+.login-button:hover {
+    background-color: #ffae82; /* Lighter shade of red on hover */
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    animation: pulse 1s infinite; /* Add pulse animation on hover */
+}
+
+.form-group label {
+    width: 120px; /* Adjust as needed */
+    flex-shrink: 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group select {
+    flex-grow: 1;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+}
+
+.gender-options input[type="radio"] {
+    margin-right: 5px; /* Adjust as needed */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    flex-grow: 1;
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.go-to-menu-button {
+    background-color: #cb997e;
+    color: white;
+    border: none;
+    padding: 15px 60px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    margin: 0 auto; /* Add this line to center horizontally */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.go-to-menu-button:hover {
+    background-color: #ffae82;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Cart Container */
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cart Item */
+.cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.cart-details {
+    flex-grow: 1;
+}
+
+.cart-details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.item-price {
+    font-size: 18px;
+    margin-left: auto;
+}
+
+#total-price {
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.business-hours-container {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #cb997e;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.business-hours {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.business-hours caption {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.business-hours th, .business-hours td {
+    border: 1px solid #cb997e;
+    padding: 8px;
+}
+
+.business-hours th {
+    background-color: #cb997e;
+    color: white;
+    text-align: center;
+}
+
+.business-hours td {
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal-container {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Adjust width as needed */
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
